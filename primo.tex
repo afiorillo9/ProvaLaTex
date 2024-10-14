@@ -1,0 +1,69 @@
+\documentclass[a4paper,12pt]{book}
+
+% Pacchetti di base
+\usepackage[utf8]{inputenc}   % Codifica dei caratteri
+\usepackage[T1]{fontenc}      % Codifica dei font
+\usepackage[italian]{babel}   % Lingua italiana
+\usepackage{lipsum}           % Testo segnaposto
+\usepackage{hyperref}         % Collegamenti ipertestuali
+\usepackage{fancyhdr}         % Personalizzazione intestazioni e piè di pagina
+\usepackage{geometry}         % Personalizzazione dei margini
+
+% Impostazioni della pagina
+\geometry{a4paper, margin=2.5cm}
+
+% Intestazioni e piè di pagina
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{Titolo del Libro} % Intestazione sinistra con il titolo del libro
+\fancyhead[R]{\leftmark}        % Intestazione destra con il titolo del capitolo
+\fancyfoot[C]{\thepage}         % Piè di pagina con il numero di pagina centrato
+
+% Titolo, autore e data
+\title{Titolo dell'Articolo}
+\author{Nome dell'Autore}
+\date{\today}
+
+\begin{document}
+
+% Frontespizio
+\maketitle
+
+% Inserisci l'indice
+\tableofcontents
+\clearpage
+
+% Capitolo 1
+\chapter{Introduzione}
+
+\section{Contesto}
+\lipsum[1]  % Testo segnaposto per il paragrafo
+
+\section{Obiettivi dell'articolo}
+\lipsum[2]  % Testo segnaposto per il paragrafo
+
+% Capitolo 2
+\chapter{Analisi dei Risultati}
+
+\section{Metodologia}
+\label{sec:metodologia}
+\lipsum[3]  % Testo segnaposto per il paragrafo
+
+\subsection{Dettagli della Ricerca}
+\lipsum[4]  % Testo segnaposto per il paragrafo
+
+\section{Discussione}
+\lipsum[5]  % Testo segnaposto per il paragrafo
+
+% Capitolo 3
+\chapter{Conclusione}
+
+\section{Risultati chiave}
+\lipsum[6]  % Testo segnaposto per il paragrafo
+
+\section{Prospettive future}
+In questa sezione, facciamo riferimento alla sezione sulla \hyperref[sec:metodologia]{metodologia} per ulteriori dettagli.
+
+\lipsum[7]  % Testo segnaposto per il paragrafo
+
+\end{document}
